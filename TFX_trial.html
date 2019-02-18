@@ -85,7 +85,10 @@
 										<option value="AUD">AUD</option>
 									</select>
 								</div>
+								
+							</div>
 							
+							<div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="rate_applied" name="rate_applied" placeholder="Rate applied">
                                 </div>
@@ -93,10 +96,11 @@
                                 <div class="form-group">
                                     <input type="date" class="form-control" id="date_rate" name="date_rate">
                                 </div>
-								
+							</div>	
+							
 								<input type="submit" value="submit" class="btn submit_btn"onclick="trace_trial();">
 								
-                            </div>
+                            
 
 							
                         </form>
@@ -115,7 +119,99 @@
 				</canvas><canvas id="myChart"></canvas>
         	</div>
         </section>
-        <!--================End Screen Area =================-->        
+        <!--================End Screen Area =================-->    
+
+
+		
+		        <!--================Screen Area =================-->
+        <section class="work_area p_120" id="report_q1" style="display:none">
+        	<div class="container">
+        		<div class="main_title">
+        			<h2>How we calculated the foreign exchange (FX) margin?</h2>
+        		</div>
+<p>We compared the FX rate used to process your international payment (the client FX rate) with the interbank FX rate at the time that you initiated your international payment.  The difference is the effective FX margin that your provider applied.  We express this as a percentage.  FX is like any other business, whereby the provider buys at a wholesale price, applies a margin and sells to you at a retail price.  Note that your provider may not have been able to buy at interbank (or, more accurately, cover the deal at interbank) which is why we refer to the ‘effective’ FX margin.  But this shouldn’t matter to you.  If your provider cannot access the wholesale market, find one who can.</p>
+        	</div>
+        </section>
+        <!--================End Screen Area =================-->
+		
+				        <!--================Screen Area =================-->
+        <section class="made_life_area p_120" id="report_q2" style="display:none">
+        	<div class="container">
+        		<div class="main_title">
+        			<h2>Why do we give you a range of possible FX margins? </h2>
+        		</div>
+<p>FX rates move in real time 24 hours per day / 5.5 days per week.  If you have only provided us with the day that you initiated your international payment, or some other time span such as morning on a particular date, we cannot compare the client FX rate with the interbank FX rate at the time that you initiated your international payment.  Instead, we take the highest, lowest and average interbank FX rate during that time period and give you the range of possible effective FX margins that could have been applied.  While this is not perfect, it does give you an idea of the margin charged and, if the lowest possible effective FX margin is still more than you were quoted, you know for sure you were mis-sold and you should contact your provider and seek a refund or, if you prefer, contact the regulator.</p>
+        	</div>
+        </section>
+        <!--================End Screen Area =================-->
+
+				        <!--================Screen Area =================-->
+        <section class="work_area p_120" id="report_q3" style="display:none">
+        	<div class="container">
+        		<div class="main_title">
+        			<h2>What if you wish to know the exact FX margin?</h2>
+        		</div>
+        					<p>If you make high value international payments or a large volume of international payments and wish to know the exact FX margin that was applied, we offer a professional service designed to meet this requirement.  If you are interested in this, please contact us.</p>
+        	</div>
+        </section>
+        <!--================End Screen Area =================-->
+
+        <!--================Contact Area =================-->
+        <section class="made_life_area p_120" id="report_contact" style="display:none">
+            <div class="container">
+			
+				<div class="main_title">
+        			<h2>Contact us</h2>
+        		</div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="contact_info">
+                            <div class="info_item">
+                                <i class="lnr lnr-home"></i>
+                                <h6>California, United States</h6>
+                                <p>Santa monica bullevard</p>
+                            </div>
+                            <div class="info_item">
+                                <i class="lnr lnr-phone-handset"></i>
+                                <h6><a href="#">00 (440) 9865 562</a></h6>
+                                <p>Mon to Fri 9am to 6 pm</p>
+                            </div>
+                            <div class="info_item">
+                                <i class="lnr lnr-envelope"></i>
+                                <h6><a href="#">support@colorlib.com</a></h6>
+                                <p>Send us your query anytime!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-right">
+                                <button type="submit" value="submit" class="btn submit_btn">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================Contact Area =================-->
+
+		
         <!--================Footer Area =================-->
         <footer class="footer_area p_120">
         	<div class="container">
