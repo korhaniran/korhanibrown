@@ -35,14 +35,40 @@ function trace_trial(){
 			const result_title = document.createElement('h2');
 			result_title.textContent = "About your payment";
 			
-			const result_desc = document.createElement('h3');
-			result_desc.textContent = "Blabla";
+			const result_desc = document.createElement('p');
+			
+			
+			margin_avg = parseFloat(document.getElementById('rate_applied').value) - parseFloat(fixerIO_data.rates[document.getElementById('credit_currency').value])
+			alert(margin_avg)
+
+			if(margin_avg >= -0.005){
+				result_desc.textContent = "Anything under 50 bps (or 0.5%) is competitive in the current market and you have received a good deal.  There is always the possibility of finding something slightly better, but in our opinion your provider has offered you good pricing and you do not need to look for another deal unless you are highly motivated to make small financial savings or are sending large amounts.  Please note that, if you were promised less than the margin that has been applied, you should contact your provider and seek a refund or, if you prefer, contact the regulator.";
+			}
+			else if (margin_avg >= -0.0099){
+				result_desc.textContent = "A margin between 50 and 99 bps (or 0.5% to 0.99%) is reasonably standard, although you can do better.  The closer the margin was to 99 bps (0.99%) the more you should consider looking for a better deal next time.  You will definitely do better than this if you shop around.  Please note that, if you were promised less than the margin that has been applied, you should contact your provider and seek a refund or, if you prefer, contact the regulator."
+			}
+			else if (margin_avg >= -0.0149){
+				result_desc.textContent = "A margin between 100 bps and 149 bps (1% to 1.49%) is reasonably expensive and you can definitely do better.  This provider is charging a large margin and you should definitely look for a better deal next time.  Please note that, if you were promised less than the margin that has been applied, you should contact your provider and seek a refund or, if you prefer, contact the regulator."
+			}
+			else{
+				result_desc.textContent = "A margin of 150 bps or more (1.5% or greater) is excessive.  I’m afraid there’s only one way to put this - you’ve been ripped off.  Do not use this provider again.  Please note that, if you were promised less than the margin that has been applied, you should contact your provider and seek a refund or, if you prefer, contact the regulator."
+			}
+			
+			var report_q1 = document.getElementById("report_q1");
+			report_q1.style.display = "block";
+			var report_q2 = document.getElementById("report_q2");
+			report_q2.style.display = "block";
+			var report_q3 = document.getElementById("report_q3");
+			report_q3.style.display = "block";
+			var report_contact = document.getElementById("report_contact");
+			report_contact.style.display = "block";			
+			
 			
 			const traceFX_report = document.getElementById('TraceFX_report');
 			traceFX_report.appendChild(result_title);
 			traceFX_report.appendChild(result_desc);
 			
-		margin_avg = parseFloat(document.getElementById('rate_applied').value) - parseFloat(fixerIO_data.rates[document.getElementById('credit_currency').value])
+		
 		
 		var ctx = document.getElementById('myChart').getContext('2d');
 		var myChart = new Chart(ctx, {
