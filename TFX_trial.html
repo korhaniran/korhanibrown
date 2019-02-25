@@ -25,19 +25,23 @@
             <div class="main_menu">
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container box_1620">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+						<!-- Brand!--> 
+						<a class="navbar-brand logo_h" href="index.html"><h2 style="color:white;">Trace FX</h2></a>
+						
+						<!--toggle get grouped for better mobile display -->
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
+						
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-							<ul class="nav navbar-nav menu_nav justify-content-center">
+							<ul class="nav navbar-nav menu_nav justify-content-end">
 								<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
 								<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li> 
-								<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+								<li class="nav-item"><a class="nav-link" href="trace_faq.html">FAQ</a> 
+								<li class="nav-item"><a class="nav-link" href="TFX_contact.html">Contact</a></li>
 							</ul>
 						</div> 
 					</div>
@@ -52,8 +56,7 @@
             	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
 				<div class="container">
 					<div class="banner_content text-center">
-						<h2>Trace FX</h2>
-						<h3>qdqsdqs</h3>
+						<h2>Trace your international payment</h2>
 					</div>
 				</div>
             </div>
@@ -65,41 +68,67 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-9">
-                        <form class="row contact_form" id="trace_trial" onsubmit="return false;">
-                            <div class="col-md-6">
-								
-								<div class="form-group">
-									<select class="form-control" name="debit_currency" id="debit_currency" class="form-control">
-										<option value="EUR">EUR</option>
-										<option value="USD">USD</option>
-									</select>
+                    <div class="col-md-12">
+                        <form class="row" id="trace_trial" onsubmit="return false;">
+                            <div class="col-md-3">
+								<div class="row">
+									<!--div class="col-sm-6">
+										<label>Debit currency:</label>
+									</div-->
+									<div class="	col-sm-6">
+										<select class="" name="debit_currency" id="debit_currency">
+											<option  disabled selected>Select Your Debit Currency:</option>
+											<option value="EUR">EUR</option>
+											<option value="USD">USD</option>
+										</select>
+									</div>
 								</div>
 								
-								<div class="form-group">
-									<select class="form-control" name="credit_currency" id="credit_currency" class="form-control">
-										<option value="GBP">GBP</option>
-										<option value="USD">USD</option>
-										<option value="CAD">CAD</option>
-										<option value="JPY">JPY</option>
-										<option value="AUD">AUD</option>
-									</select>
+								
+							</div>
+							
+							<div class="col-md-3">
+								<div class="row">
+									<!--div class="col-sm-6">
+										<label>Credit currency:</label>
+									</div-->
+								
+									<div class="col-sm-6">
+										<select name="credit_currency" id="credit_currency">
+											<option  disabled selected>Select Your Credit Currency:</option>
+											<option value="GBP">GBP</option>
+											<option value="USD">USD</option>
+											<option value="CAD">CAD</option>
+											<option value="JPY">JPY</option>
+											<option value="AUD">AUD</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-3">
+								<div class="row">
+									<!--div class="col-md-6">
+										<label>Rate applied to your payment</label>
+									</div-->
+															
+							
+									<div class="form-group col-md-6">
+										<input type="text" class="form-control" id="rate_applied" name="rate_applied" placeholder="Input rate">
+									</div>
 								</div>
 								
 							</div>
 							
-							<div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="rate_applied" name="rate_applied" placeholder="Rate applied">
-                                </div>
-								
-                                <div class="form-group">
+							<div class="col-md-3">
+								<div class="form-group">
                                     <input type="date" class="form-control" id="date_rate" name="date_rate">
                                 </div>
-							</div>	
+							</div>
 							
+							<div class="col-md-12">
 								<input type="submit" value="submit" class="btn submit_btn"onclick="trace_trial();">
-								
+							<div/>	
                             
 
 							
@@ -117,7 +146,12 @@
         		</div>
 				
 				</canvas><canvas id="myChart"></canvas>
+				
+				
         	</div>
+			
+			<div id="test_text">
+				</div>
         </section>
         <!--================End Screen Area =================-->    
 
@@ -164,26 +198,7 @@
         			<h2>Contact us</h2>
         		</div>
                 <div class="row">
-                    <div class="col-lg-3">
-                        <div class="contact_info">
-                            <div class="info_item">
-                                <i class="lnr lnr-home"></i>
-                                <h6>California, United States</h6>
-                                <p>Santa monica bullevard</p>
-                            </div>
-                            <div class="info_item">
-                                <i class="lnr lnr-phone-handset"></i>
-                                <h6><a href="#">00 (440) 9865 562</a></h6>
-                                <p>Mon to Fri 9am to 6 pm</p>
-                            </div>
-                            <div class="info_item">
-                                <i class="lnr lnr-envelope"></i>
-                                <h6><a href="#">support@colorlib.com</a></h6>
-                                <p>Send us your query anytime!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
+                    <div class="col-lg-12">
                         <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
                             <div class="col-md-6">
                                 <div class="form-group">
