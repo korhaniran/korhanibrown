@@ -64,8 +64,11 @@ body {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
-  color: #777777; }
+  color: #777777;}
 
+/*@media (min-width: 981px) { body { padding-top: 60px; } }
+*/
+  
 h1, h2, h3, h4, h5, h6 {
   font-family: "Heebo", sans-serif;
   font-weight: bold; }
@@ -310,7 +313,9 @@ button:focus {
       vertical-align: middle;
       align-self: center; }
     .home_banner_area .banner_inner .banner_content {
-      text-align: left;
+      padding-top: 115px;
+	  padding-bottom: 45px;
+	  text-align: left;
       color: #fff; }
       .home_banner_area .banner_inner .banner_content h2 {
         margin-top: 0px;
@@ -377,12 +382,12 @@ button:focus {
 .banner_area {
   position: relative;
   z-index: 1;
-  min-height: 430px; }
+  min-height: 0px; }
   .banner_area .banner_inner {
     position: relative;
     overflow: hidden;
     width: 100%;
-    min-height: 430px;
+    min-height: 250px;
     background: #3bacf0;
     z-index: 1; }
     .banner_area .banner_inner .banner_content {
